@@ -20,10 +20,10 @@ The dependency-free build writes the site to `dist/`. On Vercel, use `npm run bu
 
 ## Keeping the portfolio honest
 
-- Project descriptions are written by hand from the public repositories and distinguish shipped work from concept work.
-- The cards use hand-coded illustrative UI, not fabricated screenshots. Each preview is labeled.
-- Replace the illustrations with genuine, permission-safe screenshots when ready.
-- The Outreach Dashboard source link is deliberately omitted until its public repository has been reviewed and its sample lead data removed or anonymized.
+- Project descriptions are written by hand from available project materials and distinguish shipped work from concept work.
+- Formation Agency / EduFormation uses three genuine app screenshots supplied by Habib (home, learner progress, and live events). Browser chrome and unrelated desktop notifications were cropped out; the separate admin capture with an exposed learner email was not used. Other custom UI previews are hand-coded illustrations and are labeled as such.
+- For other projects, replace the illustrations with genuine, permission-safe screenshots when available.
+- The Outreach Dashboard source link is deliberately omitted until its public repository has been reviewed and its sample lead data removed or anonymized. Formation Agency’s live app link requires sign-in; its source repository is private.
 - No client metrics, testimonials, or outcomes are claimed here.
 
 ## Before sharing publicly
