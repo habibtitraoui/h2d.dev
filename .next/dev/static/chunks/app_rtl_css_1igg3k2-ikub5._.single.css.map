@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/rtl.css"],"sourcesContent":["[dir=\"rtl\"] {\r\n  text-align: right;\r\n}\r\n\r\n[dir=\"rtl\"] :lang(ar) {\r\n  font-family: Tahoma, Arial, sans-serif;\r\n  letter-spacing: normal;\r\n}\r\n\r\n[dir=\"rtl\"] .language-switcher {\r\n  direction: ltr;\r\n}\r\n\r\n[dir=\"rtl\"] .project-info > p.project-outcome {\r\n  border-left: 0;\r\n  border-right: 2px solid #70d49d;\r\n}\r\n\r\n[dir=\"rtl\"] .footer-links {\r\n  direction: ltr;\r\n}\r\n"],"names":[],"mappings":"AAAA;;;;AAIA;;;;;AAKA;;;;AAIA;;;;;AAKA"}}]
+}

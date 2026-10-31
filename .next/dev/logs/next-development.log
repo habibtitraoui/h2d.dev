@@ -1,0 +1,24 @@
+{"timestamp":"00:00:01.699","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:02.914","source":"Browser","level":"LOG","message":"[Vercel Web Analytics] Debug mode is enabled by default in development. No requests will be sent to the server."}
+{"timestamp":"00:00:02.914","source":"Browser","level":"LOG","message":"[Vercel Web Analytics] [view] http://localhost:3000/ {\"o\":\"http://localhost:3000/\",\"sdkn\":\"@vercel/analytics/react\",\"sdkv\":\"2.0.1\",\"sv\":\"0.1.3\"} /_vercel/insights/view"}
+{"timestamp":"00:00:05.409","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:00:05.581","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:00:05.606","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:00:05.807","source":"Browser","level":"LOG","message":"[Vercel Web Analytics] Debug mode is enabled by default in development. No requests will be sent to the server."}
+{"timestamp":"00:00:05.807","source":"Browser","level":"LOG","message":"[Vercel Web Analytics] [view] http://localhost:3000/ {\"o\":\"http://localhost:3000/\",\"r\":\"\",\"sdkn\":\"@vercel/analytics/react\",\"sdkv\":\"2.0.1\",\"sv\":\"0.1.3\"} /_vercel/insights/view"}
+{"timestamp":"00:00:26.539","source":"Browser","level":"LOG","message":"[Vercel Web Analytics] Debug mode is enabled by default in development. No requests will be sent to the server."}
+{"timestamp":"00:00:26.540","source":"Browser","level":"LOG","message":"[Vercel Web Analytics] [view] http://localhost:3000/ {\"o\":\"http://localhost:3000/\",\"sdkn\":\"@vercel/analytics/react\",\"sdkv\":\"2.0.1\",\"sv\":\"0.1.3\"} /_vercel/insights/view"}
+{"timestamp":"00:00:33.586","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:00:33.670","source":"Browser","level":"LOG","message":"[Vercel Web Analytics] Debug mode is enabled by default in development. No requests will be sent to the server."}
+{"timestamp":"00:00:33.670","source":"Browser","level":"LOG","message":"[Vercel Web Analytics] [view] http://localhost:3000/ {\"o\":\"http://localhost:3000/\",\"r\":\"\",\"sdkn\":\"@vercel/analytics/react\",\"sdkv\":\"2.0.1\",\"sv\":\"0.1.3\"} /_vercel/insights/view"}
+{"timestamp":"00:01:07.320","source":"Server","level":"LOG","message":"✓ Compiled in 13ms"}
+{"timestamp":"00:01:10.237","source":"Server","level":"LOG","message":"✓ Compiled in 18ms"}
+{"timestamp":"00:02:29.435","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:02:29.511","source":"Browser","level":"LOG","message":"[Vercel Web Analytics] Debug mode is enabled by default in development. No requests will be sent to the server."}
+{"timestamp":"00:02:29.511","source":"Browser","level":"LOG","message":"[Vercel Web Analytics] [view] http://localhost:3000/ {\"o\":\"http://localhost:3000/\",\"r\":\"\",\"sdkn\":\"@vercel/analytics/react\",\"sdkv\":\"2.0.1\",\"sv\":\"0.1.3\"} /_vercel/insights/view"}
+{"timestamp":"00:02:29.525","source":"Browser","level":"WARN","message":"Image with src \"/assets/maysem-al-sharq/storefront.webp\" was detected as the Largest Contentful Paint (LCP). Please add the `loading=\"eager\"` property if this image is above the fold.\nRead more: https://nextjs.org/docs/app/api-reference/components/image#loading"}
+{"timestamp":"00:02:29.542","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mImage with src \\\"/assets/maysem-al-sharq/storefront.webp\\\" was detected as the Largest Contentful Paint (LCP). Please add the `loading=\\\"eager\\\"` property if this image is above the fold.\\nRead more: https://nextjs.org/docs/app/api-reference/components/image#loading\\u001b[39m\""}
+{"timestamp":"00:02:56.346","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:02:56.439","source":"Browser","level":"LOG","message":"[Vercel Web Analytics] Debug mode is enabled by default in development. No requests will be sent to the server."}
+{"timestamp":"00:02:56.439","source":"Browser","level":"LOG","message":"[Vercel Web Analytics] [view] http://localhost:3000/ {\"o\":\"http://localhost:3000/\",\"r\":\"\",\"sdkn\":\"@vercel/analytics/react\",\"sdkv\":\"2.0.1\",\"sv\":\"0.1.3\"} /_vercel/insights/view"}
+{"timestamp":"00:03:40.721","source":"Server","level":"LOG","message":"✓ Compiled in 22ms"}

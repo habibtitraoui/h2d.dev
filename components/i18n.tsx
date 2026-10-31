@@ -1,7 +1,7 @@
 'use client';
 
-import { ChevronDown, Globe2 } from 'lucide-react';
-import { createContext, useContext, useEffect, useState } from 'react';
+import { Check, ChevronDown, Globe2 } from 'lucide-react';
+import { createContext, useContext, useEffect, useRef, useState } from 'react';
 
 export type Language = 'en' | 'fr' | 'ar';
 type Copy = Record<string, string>;
@@ -57,4 +57,73 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   return <I18nContext.Provider value={{ language, setLanguage, t: (key) => copy[language][key] }}>{children}</I18nContext.Provider>;
 }
 export function useI18n() { const context = useContext(I18nContext); if (!context) throw new Error('useI18n must be used inside LanguageProvider'); return context; }
-export function LanguageSwitcher() { const { language, setLanguage, t } = useI18n(); return <div className="language-switcher"><Globe2 size={15} aria-hidden="true" /><label className="sr-only" htmlFor="language">{t('language')}</label><select id="language" value={language} onChange={(event) => setLanguage(event.target.value as Language)} aria-label={t('language')}><option value="en">English</option><option value="fr">Français</option><option value="ar">العربية</option></select><ChevronDown size={13} aria-hidden="true" /></div>; }
+const languageNames: Record<Language, string> = { en: 'English', fr: 'Français', ar: 'العربية' };
+const languages: Language[] = ['en', 'fr', 'ar'];
+
+export function LanguageSwitcher() {
+  const { language, setLanguage, t } = useI18n();
+  const [isOpen, setIsOpen] = useState(false);
+  const switcherRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handlePointerDown = (event: PointerEvent) => {
+      if (event.target instanceof Node && !switcherRef.current?.contains(event.target)) setIsOpen(false);
+    };
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsOpen(false);
+        triggerRef.current?.focus();
+      }
+    };
+
+    document.addEventListener('pointerdown', handlePointerDown);
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('pointerdown', handlePointerDown);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen]);
+
+  const selectLanguage = (next: Language) => {
+    setLanguage(next);
+    setIsOpen(false);
+    triggerRef.current?.focus();
+  };
+
+  return (
+    <div className="language-switcher" ref={switcherRef}>
+      <button
+        ref={triggerRef}
+        className="language-trigger"
+        type="button"
+        aria-label={`${t('language')}: ${languageNames[language]}`}
+        aria-expanded={isOpen}
+        aria-controls="language-options"
+        onClick={() => setIsOpen((open) => !open)}
+      >
+        <Globe2 size={16} aria-hidden="true" />
+        <span>{languageNames[language]}</span>
+        <ChevronDown className={isOpen ? 'is-open' : ''} size={14} aria-hidden="true" />
+      </button>
+      {isOpen && (
+        <div className="language-menu" id="language-options" role="group" aria-label={t('language')}>
+          {languages.map((option) => (
+            <button
+              key={option}
+              className={`language-option ${language === option ? 'is-selected' : ''}`}
+              type="button"
+              aria-pressed={language === option}
+              onClick={() => selectLanguage(option)}
+            >
+              <span>{languageNames[option]}</span>
+              {language === option && <Check size={15} aria-hidden="true" />}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}

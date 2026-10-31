@@ -1,0 +1,24 @@
+/* [project]/app/rtl.css [app-client] (css) */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] :lang(ar) {
+  letter-spacing: normal;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+[dir="rtl"] .language-switcher {
+  direction: ltr;
+}
+
+[dir="rtl"] .project-info > p.project-outcome {
+  border-left: 0;
+  border-right: 2px solid #70d49d;
+}
+
+[dir="rtl"] .footer-links {
+  direction: ltr;
+}
+
+/*# sourceMappingURL=app_rtl_css_1igg3k2-ikub5._.single.css.map*/
