@@ -1,2 +1,7 @@
 import { services } from '../data/portfolio';
-export function Services() { return <section className="service-strip section-wrap" aria-label="Services"><p className="strip-label mono">WHAT I CAN HELP WITH</p><div className="service-list">{services.map((service, index) => <span key={service}><b>{String(index + 1).padStart(2, '0')}</b>{service}</span>)}</div></section>; }
+import { useI18n } from '../i18n';
+
+export function Services() {
+  const { t } = useI18n();
+  return <section className="service-strip section-wrap" aria-label={t('serviceLabel')}><p className="strip-label mono">{t('services')}</p><div className="service-list">{services.map((_, index) => <span key={index}><b>{String(index + 1).padStart(2, '0')}</b>{t(`service${index + 1}`)}</span>)}</div></section>;
+}

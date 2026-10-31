@@ -1,0 +1,21 @@
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] :lang(ar) {
+  font-family: Tahoma, Arial, sans-serif;
+  letter-spacing: normal;
+}
+
+[dir="rtl"] .language-switcher {
+  direction: ltr;
+}
+
+[dir="rtl"] .project-info > p.project-outcome {
+  border-left: 0;
+  border-right: 2px solid #70d49d;
+}
+
+[dir="rtl"] .footer-links {
+  direction: ltr;
+}

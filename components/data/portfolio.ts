@@ -1,8 +1,11 @@
+const whatsappUrl = 'https://wa.me/213797394607';
+
 export const profile = {
-  name: 'Habib Titraoui', brand: 'H2D.dev', email: 'titraoui.habibe@gmail.com', availability: 'Available for selected projects',
+  name: 'Habib Titraoui', brand: 'H2D.dev', email: 'titraoui.habibe@gmail.com', whatsapp: whatsappUrl, availability: 'Available for selected projects',
   social: [
     { label: 'GitHub', href: 'https://github.com/habibtitraoui' },
     { label: 'Instagram', href: 'https://www.instagram.com/h2d.dev/' },
+    { label: 'WhatsApp', href: whatsappUrl },
     { label: 'Email', href: 'mailto:titraoui.habibe@gmail.com' },
   ],
 } as const;

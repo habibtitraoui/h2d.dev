@@ -1,3 +1,9 @@
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import { process } from '../data/portfolio';
-export function Approach() { return <section className="approach-section" id="approach"><div className="section-wrap approach-inner"><div className="approach-heading"><p className="eyebrow mono">A CALM, CLEAR PROCESS</p><h2>Start with the<br />actual problem<span className="accent">.</span></h2><p>Good software starts before the first line of code. I get clear on what is getting in the way, then build the smallest useful thing that fixes it.</p><a className="text-link" href="#contact">Sound like your kind of project? <ArrowUpRight size={14} /></a></div><div className="steps-list">{process.map(([number, title, text]) => <article key={number}><span className="step-number">{number}</span><div><h3>{title}</h3><p>{text}</p></div><CheckCircle2 className="step-symbol" size={18} /></article>)}</div></div></section>; }
+import { useI18n } from '../i18n';
+
+export function Approach() {
+  const { t } = useI18n();
+  const title = t('approachTitle').split('|');
+  return <section className="approach-section" id="approach"><div className="section-wrap approach-inner"><div className="approach-heading"><p className="eyebrow mono">{t('approachEyebrow')}</p><h2>{title[0]}<br />{title[1].replace(/\.$/, '')}<span className="accent">.</span></h2><p>{t('approachText')}</p><a className="text-link" href="#contact">{t('projectFit')} <ArrowUpRight size={14} /></a></div><div className="steps-list">{process.map(([number]) => <article key={number}><span className="step-number">{number}</span><div><h3>{t(`step${Number(number)}Title`)}</h3><p>{t(`step${Number(number)}Text`)}</p></div><CheckCircle2 className="step-symbol" size={18} /></article>)}</div></div></section>;
+}
